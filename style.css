@@ -1,0 +1,19 @@
+/* Custom Scrollbar for Dark Mode */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #2d3748; /* dark-700 */
+}
+::-webkit-scrollbar-thumb {
+    background: #718096; /* dark-500 */
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0; /* dark-400 */
+}
+
+/* Utility */
+.hidden {
+    display: none;
+}

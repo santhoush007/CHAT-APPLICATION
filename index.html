@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Chat App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #2d3748; }
+    ::-webkit-scrollbar-thumb { background: #718096; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #a0aec0; }
+  </style>
+</head>
+<body class="font-sans antialiased bg-gray-900 text-gray-200">
+
+  <div id="loginContainer" class="flex flex-col h-screen max-w-2xl mx-auto justify-center p-8">
+    <div class="bg-gray-800 p-8 rounded-lg shadow-xl">
+      <h1 class="text-3xl font-bold text-center mb-6">Welcome to Live Chat</h1>
+      <form id="loginForm">
+        <div class="mb-4">
+          <label for="displayNameInput" class="block text-sm mb-2">Display Name</label>
+          <input
+            type="text"
+            id="displayNameInput"
+            placeholder="Enter your name..."
+            required
+            autocomplete="off"
+            class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+          />
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-emerald-600 text-white p-3 rounded-lg font-bold hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+        >
+          Join Chat
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div id="chatContainer" class="flex flex-col h-screen max-w-2xl mx-auto bg-gray-800 shadow-lg hidden">
+    <header class="bg-emerald-700 text-white p-4 shadow-md">
+      <h1 class="text-2xl font-bold text-center">Our Live Chat</h1>
+      <div class="text-xs text-center mt-1">
+        Logged in as: <span id="displayNameDisplay" class="font-bold">...</span> 
+        (<span id="userIdDisplay" class="font-mono opacity-70">...</span>)
+      </div>
+    </header>
+
+    <main id="messageContainer" class="flex-grow p-4 overflow-y-auto space-y-4 bg-gray-800">
+      <div class="flex justify-center text-gray-400">
+        Loading messages...
+      </div>
+    </main>
+
+    <footer class="p-4 bg-gray-900 border-t border-gray-700">
+      <form id="chatForm" class="flex space-x-2">
+        <input
+          type="text"
+          id="messageInput"
+          placeholder="Type your message..."
+          autocomplete="off"
+          class="flex-grow p-3 bg-gray-700 border border-gray-600 rounded-full text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+        />
+        <button
+          type="submit"
+          class="bg-emerald-600 text-white p-3 rounded-full hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+          </svg>
+        </button>
+      </form>
+    </footer>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
