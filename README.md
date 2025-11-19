@@ -10,7 +10,8 @@ DURATION : 6 WEEKS
 
 MENTOR : NEELA SANTOSH
 
-## TACK-2
+## TACK 2
+
 ## CHAT-APPLICATION:
 
 🔴 Real-Time Chat Application — Project Description
